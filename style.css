@@ -1,0 +1,17 @@
+.customDiv{
+	padding: 10px;
+	width:100%;
+}
+
+.customDiv1{
+	padding: 10px;
+	width:100%;
+	height: 80%;
+}
+.customDivMain {
+  background-color: #ccccb3;
+}
+
+.jumbotron {
+  background-color: #ffffb3;
+}
