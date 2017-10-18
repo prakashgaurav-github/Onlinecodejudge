@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+    <title>Online Judge</title>
+
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body class="customDivMain">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <div class="container">
+  		<div class="row">
+  			<div class="col-lg-10">
+  				<div class="customDiv">
+  					<span><a href="index.html" class="btn"><h3>Online judge</h3></a></span>
+  				</div> 
+  			</div>
+  			<div class="col-lg-1 customDiv">
+  				<button class="btn btn-success" data-target="#loginModal" data-toggle="modal">Log In</button>
+  				<div class="modal" id="loginModal" tabindex="-1">
+  					<div class="modal-dialog modal-sm">
+  						<div class="modal-content">
+  							<div class="modal-header">
+  								<h4 class="modal-title text-danger">Log In</h4>
+  								<button class="close" data-dismiss="modal">&times;</button>
+  							</div>
+  							<div class="modal-body">
+  								<form>
+  									<div class="form-group">
+  										<label for="inputUserName">Username</label>
+  										<input class="form-control" type="text" id="inputUserName" placeholder="Your unique username">
+  									</div>
+  									<div class="form-group">
+  										<label for="inputPassword">Password</label>
+  										<input class="form-control" type="password" id="inputPassword" placeholder="Your password">
+  									</div>
+  								</form>
+  							</div>
+  							<div class="modal-footer">
+  								<a href="homepage.html" class="btn-success btn">Login</a>
+  								<button class="btn btn-success" data-dismiss="modal">Close</button>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="col-lg-1 customDiv">
+  				<button class="btn btn-success" data-target="#signupModal" data-toggle="modal">Sign Up</button>
+  				<div class="modal" id="signupModal" tabindex="-1">
+  					<div class="modal-dialog">
+  						<div class="modal-content">
+  							<div class="modal-header">
+  								<h4 class="modal-title text-danger">Sign Up</h4>
+  								<button class="close" data-dismiss="modal">&times;</button>
+  							</div>
+  							<div class="modal-body">
+  								<form>
+  									<div class="form-group">
+  										<input class="form-control" type="text" id="Name" placeholder="Your full name">
+  									</div>
+  									<div class="form-group">
+  										<input class="form-control" type="text" id="inputUserName" placeholder="Unique username">
+  									</div>
+  									<div class="form-group">
+  										<input class="form-control" type="email" id="inputEmail" placeholder="E-mail address">
+  									</div>
+  									<div class="form-group">
+  										<input class="form-control" type="password" id="inputPassword" placeholder="Password">
+  									</div>
+  									<div>
+  										<select class="form-control input-lg">
+  											<option>Select your college year</option>
+  											<option>1st Year</option>
+  											<option>2nd Year</option>
+  											<option>3rd Year</option>
+  											<option>4th Year</option>
+  										</select>
+  									</div>
+  								</form>
+  							</div>
+  							<div class="modal-footer">
+  								<a href="indexnew.html" class="btn-success btn">Sign Up</a>
+  								<button class="btn btn-success" data-dismiss="modal">Close</button>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-lg-1 "></div>
+  			<div class="col-lg-4">
+  				<div class="jumbotron">
+  					<h1 align="center" class="text-danger">Learn</h1>
+  					<p align="center">Start learning about language,data structures and algorithms.</p>
+  			        <p class="text-center"><button class="btn btn-success" id="getStarted">Get Started</button></p>
+   					
+  			        <div class="alert alert-danger collapse" id="myAllert">
+  			        <a href="#" class="close" id="linkClose">&times;</a>
+  					You must be <strong>Logged In</strong> to access this area.
+  			        </div>
+  				</div>
+  			</div>
+  			<div class="col-lg-1"></div>
+  			<div class="col-lg-1"></div>
+  			<div class="col-lg-4">
+  				<div class="jumbotron">
+  					<h1 align="center" class="text-danger">Practice</h1>
+  					<p align="center">Practice what you learned by applying them on real world problems.</p>
+  			        <p class="text-center"><button class="btn btn-success" id="getStarted1">Get Started</button></p>
+   					
+  			        <div class="alert alert-danger collapse" id="myAllert1">
+  			        <a href="#" class="close" id="linkClose1">&times;</a>
+  					You must be <strong>Logged In</strong> to access this area.
+  			        </div>
+  				</div>
+  			</div>
+  			<div class="col-lg-1 "></div>
+  		</div>
+  	</div>
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-lg-1 "></div>
+  			<div class="col-lg-4 ">
+  				<div class="jumbotron">
+  					<h1 align="center" class="text-danger">Compete</h1>
+  					<p align="center" class="">Show your skills by competing against the best coders in the world.</p>
+  					<p class="text-center"><button class="btn btn-success" id="getStarted2">Get Started</button></p>
+   					
+  					<div class="alert alert-danger collapse" id="myAllert2">
+  					<a href="#" class="close" id="linkClose2">&times;</a>
+  					You must be <strong>Logged In</strong> to access this area.
+  					</div>
+  				</div>
+  			</div>
+  			<div class="col-lg-1"></div>
+  			<div class="col-lg-1"></div>
+  			<div class="col-lg-4">
+  				<div class="jumbotron">
+  					<h1 align="center" class="text-danger">Share</h1>
+  					<p align="center">You know something? Share it in the community.</p>
+  					<p class="text-center"><button class="btn btn-success" id="getStarted3">Get Started</button></p>
+   					
+  					<div class="alert alert-danger collapse" id="myAllert3">
+  						<a href="#" class="close" id="linkClose3">&times;</a>
+  						You must be <strong>Logged In</strong> to access this area.
+  					</div>
+  				</div>
+  			</div>
+  			<div class="col-lg-1"></div>
+  		</div>
+  	</div>
+
+
+    <script type="text/javascript">
+    	$(document).ready(function($) {
+    		$('#getStarted').click(function(){
+    			$('#myAllert').show('fade');
+    		});
+    		$('#linkClose').click(function(){
+    			$('#myAllert').hide('fade');
+    		});
+
+
+    		$('#getStarted1').click(function(){
+    			$('#myAllert1').show('fade');
+    		});
+
+    		$('#linkClose1').click(function(){
+    			$('#myAllert1').hide('fade');
+    		});
+
+
+    		$('#getStarted2').click(function(){
+    			$('#myAllert2').show('fade');
+    		});
+
+    		$('#linkClose2').click(function(){
+    			$('#myAllert2').hide('fade');
+    		});
+
+
+    		$('#getStarted3').click(function(){
+    			$('#myAllert3').show('fade');
+    		});
+
+    		$('#linkClose3').click(function(){
+    			$('#myAllert3').hide('fade');
+    		});
+    	});
+    </script>
+
+
+
+
+
+  </body>
+</html>
