@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <title>Online Judge Home</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body class="">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="customDiv">
+            <span><h3 class="text-info">Online judge</h3></span>
+          </div> 
+        </div>
+        <div class="col-lg-6 customDiv2">
+          <div class="btn-toolbar">
+            <div class="btn-group">
+              <a href="homepage.html" class="btn btn-success">Home</a>
+              <a href="learning.html" class="btn btn-success">Learn</a>
+              <a href="problemset.html" class="btn btn-success">Practice</a>
+              <a href="competition.html" class="btn btn-success">Compete</a>
+              <a href="myblog.html" class="btn btn-success">Share</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<!-- Output a pdf file of the problem here .  Rest of the code is not needed-->
+
+
+      <div class="row customDiv2">
+        <div class="col-lg-12">
+          <h2 class="text-center">E.Ralph and Mushrooms</h2>
+        </div>
+        <div class="col-lg-12">
+          <h5 class="text-center lead">time limit per test:2.5 seconds</h2>
+        </div>
+        <div class="col-lg-12">
+          <h5 class="text-center lead">memory limit per test:512 megabytes</h2>
+        </div>
+        <div class="col-lg-12">
+          <h5 class="text-center lead">input:standard input</h2>
+        </div>
+        <div class="col-lg-12">
+          <h5 class="text-center lead">output:standard output</h2>
+        </div>
+        <div class="col-lg-12">
+          <h5 class="text-center lead">tags:dp,graphs</h2>
+        </div>
+      </div>
+      <div class="row customDiv2">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-11">
+            <h5>Ralph is going to collect mushrooms in the Mushroom Forest.</h5>
+          </div>
+      </div>
+      <div class="row customDiv2">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-11">
+            <h5>There are m directed paths connecting n trees in the Mushroom Forest. On each path grow some mushrooms. When Ralph passes a path, he collects all the mushrooms on the path. The Mushroom Forest has a magical fertile ground where mushrooms grow at a fantastic speed. New mushrooms regrow as soon as Ralph finishes mushroom collection on a path. More specifically, after Ralph passes a path the i-th time, there regrow i mushrooms less than there was before this pass. That is, if there is initially x mushrooms on a path, then Ralph will collect x mushrooms for the first time, x - 1 mushrooms the second time, x - 1 - 2 mushrooms the third time, and so on. However, the number of mushrooms can never be less than 0.</h5>
+          </div>
+      </div>
+      <div class="row customDiv2">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-11">
+            <h5>For example, let there be 9 mushrooms on a path initially. The number of mushrooms that can be collected from the path is 9, 8, 6 and 3 when Ralph passes by from first to fourth time. From the fifth time and later Ralph can't collect any mushrooms from the path (but still can pass it).</h5>
+          </div>
+      </div>
+      <div class="row customDiv2">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-11">
+            <h5>Ralph decided to start from the tree s. How many mushrooms can he collect using only described paths?</h5>
+          </div>
+      </div>
+      <div class="row">
+        <h5>Input : </h5>
+      </div>
+      <div class="row customDiv2">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+          <h5>The first line contains two integers n and m (1 ≤ n ≤ 10^6, 0 ≤ m ≤ 10^6), representing the number of trees and the number of directed paths in the Mushroom Forest, respectively.</h5>
+        </div>
+      </div>
+       <div class="row customDiv2">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+          <h5>Each of the following m lines contains three integers x, y and w (1 ≤ x, y ≤ n, 0 ≤ w ≤ 10^8), denoting a path that leads from tree x to tree y with w mushrooms initially. There can be paths that lead from a tree to itself, and multiple paths between the same pair of trees.</h5>
+        </div>
+      </div>
+       <div class="row customDiv2">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+          <h5>The last line contains a single integer s (1 ≤ s ≤ n) — the starting position of Ralph.</h5>
+        </div>
+      </div>
+      <div class="row">
+        <h5>Output : </h5>
+      </div>
+      <div class="row customDiv2">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+          <h5>Print an integer denoting the maximum number of the mushrooms Ralph can collect during his route.</h5>
+        </div>
+      </div>
+      <div class="row">
+        <h5>Examples : </h5>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+          <h5>Input : </h5>
+        </div>  
+      </div>
+      <div class="row">
+         <div class="col-lg-12">
+                       <pre>
+                       2  2 
+                       1  2  4
+                       2  1  4
+                       </pre>
+         </div> 
+      </div>
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+          <h5>Output : </h5>
+        </div>  
+      </div>
+      <div class="row">
+         <div class="col-lg-12">
+                       <pre>
+                       16
+                       </pre>
+         </div> 
+      </div>
+      <div class="row"></div>
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+          <h5>Input : </h5>
+        </div>  
+      </div>
+      <div class="row">
+         <div class="col-lg-12">
+                       <pre>
+                       3  3 
+                       1  2  4
+                       2  3  3
+                       1  3  8
+                       </pre>
+         </div> 
+      </div>
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+          <h5>Output : </h5>
+        </div>  
+      </div>
+      <div class="row">
+         <div class="col-lg-12">
+                       <pre>
+                       8
+                       </pre>
+         </div> 
+      </div>
+      <div class="row">
+        <h5>Note : </h5>
+      </div>
+      <div class="row customDiv2">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+          <h5>In the first sample Ralph can pass three times on the circle and collect 4 + 4 + 3 + 3 + 1 + 1 = 16 mushrooms. After that there will be no mushrooms for Ralph to collect.</h5>
+        </div>
+      </div>
+      <div class="row customDiv2">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+          <h5>In the second sample, Ralph can go to tree 3 and collect 8 mushrooms on the path from tree 1 to tree 3.</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5"></div>
+        <div class="col-lg-2">
+          <a href="submit.html" class="btn btn-success" title="Submit your solution">Submit</a>
+        </div>
+        <div class="col-lg-5"></div>
+      </div>
+      <div class="row"></div>
+    </div>
+  </body>
+</html>
