@@ -21,6 +21,9 @@
 	padding-left: 80px;
 	padding-top: 10px;
 }
+.customDiv5{
+	padding-top: 50px;
+}
 .jumbotron {
   background-color: #ffffb3;
 }
@@ -28,6 +31,7 @@
 	text-align: center;
 	background-color: white;
 }
-td,th {
+td,th,li {
     text-align: center;
 }
+
