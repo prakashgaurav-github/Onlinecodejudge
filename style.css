@@ -2,7 +2,6 @@
 	padding: 10px;
 	width:100%;
 }
-
 .customDiv1{
 	padding: 10px;
 	width:100%;
@@ -11,7 +10,24 @@
 .customDivMain {
   background-color: #ccccb3;
 }
-
+.customDiv2{
+	padding-left: 100px;
+	padding-top: 10px;
+}
+.customDiv4{
+  padding-bottom: 20px;
+}
+.customDiv3{
+	padding-left: 80px;
+	padding-top: 10px;
+}
 .jumbotron {
   background-color: #ffffb3;
+}
+.listclass{
+	text-align: center;
+	background-color: white;
+}
+td,th {
+    text-align: center;
 }
